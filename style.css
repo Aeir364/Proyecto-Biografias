@@ -12,7 +12,22 @@ header {
   text-align: center;
   padding: 20px;
   border-bottom: 4px solid #3b5998;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px; /* ajusta el tamaño según lo necesites */
+  margin-right: 90px;
+}
+
 
 header h1 {
   margin: 0;
@@ -21,6 +36,8 @@ header h1 {
 
 nav {
   margin-top: 10px;
+  margin-left: auto;
+
 }
 
 nav a {
@@ -87,6 +104,7 @@ footer {
   color: white;
   border-top: 4px solid #3b5998;
 }
+
 .imagen-inclusion {
   float: right;
   margin: 0 0 10px 20px; /* Espaciado: arriba, derecha, abajo, izquierda */
@@ -96,4 +114,23 @@ footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+.titulo-seccion {
+  cursor: pointer;
+  background-color: #e0e0e0;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #ccc;
+}
+
+.contenido-seccion {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  padding: 0 10px;
+}
+
+section.activa .contenido-seccion {
+  max-height: 1000px; /* suficiente para mostrar el contenido */
+  transition: max-height 0.5s ease-in;
+}
 
